@@ -1,23 +1,31 @@
-.banner{
+.banner {
     height: 450px;
-   background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-image: url("../Assets/images/banner.jpg");
 }
-.btnbaner{
+.btnbaner {
     height: 60px;
 }
-.btnbaner:hover{
-
+.btnbaner:hover {
     background-color: none !important;
     border: 3px solid #fff;
 }
-.texbanner{
+.texbanner {
+    font-weight: 300;
     text-align: justify;
+    font-size: 18px;
 }
-.textTitle{
+.textTitle {
     font-weight: 600;
 }
-.col2{
+.col2 {
     align-items: center;
+}
+.btn1 {
+    display: flex;
+    justify-content: center;
+}
+.btnlink {
+    text-decoration: none;
 }
