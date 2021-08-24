@@ -1,24 +1,24 @@
-.imglogo{
+.imglogo {
     width: 75px;
 }
-.texlogo{
+.texlogo {
     margin-right: 15px;
     font-weight: 600;
     color: #fff;
 }
-.header{
-    background: linear-gradient(#1d2029 , #290110 );
-    
+.header {
+    background: linear-gradient(#1d2029, #290110);
 }
-.navlink1{
-    
+.navlink1 {
     color: rgb(228, 78, 8) !important;
 }
-.navlink{
-    border-radius: 20px;
-    
+.navlink1:hover {
+    cursor: pointer;
 }
-.navlink:hover{
+.navlink {
+    border-radius: 20px;
+}
+.navlink:hover {
     cursor: pointer;
     background: #fa573a;
     color: #fff;
