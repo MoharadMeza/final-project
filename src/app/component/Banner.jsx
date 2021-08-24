@@ -9,7 +9,7 @@ const Banner = () => {
                 <div className="row h-100 justify-content-end">
                     <div className="col-6 align-self-center">
                         <h4 className="textTitle p-2 px-5">
-                              مشهد شرکت توانیر
+                     شرکت توانیر
                         </h4>
                         <p className="texbanner p-2 px-5">
                             در صورت تمایل به ثبت درخواست جدید، به بخش ثبت درخواست و در صورت تمایل به پیگیری درخواست قبلی ، با در دست داشتن کد رهگیری درخواست خود، به بخش پیگیری درخواست مراجعه نمایید.
