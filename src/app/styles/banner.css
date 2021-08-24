@@ -1,6 +1,20 @@
 .banner{
     height: 400px;
-    background-position: top;
-    background-size: cover;
-    background-image: url("../Assets/images/Your-Utility-and-Energy-or-Electricity-Company-Whats-the-Difference-e1623213826345.jpg");
+   background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../Assets/images/banner.jpg");
+}
+.btnbaner{
+    height: 60px;
+}
+.btnbaner:hover{
+
+    background-color: none !important;
+    border: 3px solid #fff;
+}
+.texbanner{
+    text-align: justify;
+}
+.textTitle{
+    font-weight: 600;
 }

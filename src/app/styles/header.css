@@ -1,0 +1,25 @@
+.imglogo{
+    width: 75px;
+}
+.texlogo{
+    margin-right: 15px;
+    font-weight: 600;
+    color: #fff;
+}
+.header{
+    background: linear-gradient(#1d2029 , #290110 );
+    background-color:#1d2029  ;
+}
+.navlink1{
+    
+    color: rgb(228, 78, 8) !important;
+}
+.navlink{
+    border-radius: 20px;
+    
+}
+.navlink:hover{
+    cursor: pointer;
+    background: #fa573a;
+    color: #fff;
+}

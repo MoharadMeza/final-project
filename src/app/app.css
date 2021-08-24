@@ -1,3 +1,8 @@
 *{
-    font-family: 'Vazir';
+    font-family: 'iranYekan';
 }
+@font-face {
+    font-family: 'iranYekan';
+    src: local('iranYekan'),
+      url(./Assets/fonts/iranyekanregular.woff) format('woff');
+  }
