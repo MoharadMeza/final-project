@@ -1,8 +1,100 @@
-.overview{
+.overview {
   color: black;
   text-align: center;
+  font-family: "iranYekan";
 }
 
-.icon :hover{
-  color: rgb(238, 0, 0);
+.titleOverwiew {
+  font-family: "iranYekan";
+  font-weight: 600;
+  font-size: 30px;
+  color: rgb(53, 53, 53) !important;
+  padding: 10px 50px;
+  background: rgb(240, 240, 240);
+  border-radius: 30px;
+}
+
+.card {
+  max-width: 500px;
+  height: 300px;
+  text-align: right;
+  border-radius: 20px !important;
+  box-shadow: rgba(71, 71, 73, 0.87) 0px 7px 29px 0px;
+  border-bottom: rgb(228, 78, 8) 3px solid !important ;
+}
+@media screen and (max-width: 600px) {
+  .card {
+    max-width: 500px;
+    height: 260px;
+    text-align: right;
+    border-radius: 20px !important;
+    box-shadow: rgba(71, 71, 73, 0.87) 0px 7px 29px 0px;
+    border-bottom: rgb(228, 78, 8) 3px solid !important ;
+  }
+}
+.containerOver {
+  /* background-color: rgb(245, 245, 245); */
+}
+.slick-prev:before,
+.slick-next:before {
+  color: rgb(228, 78, 8) 3px solid !important ;
+  font-size: 30px;
+}
+[dir="rtl"] .slick-next:before {
+  color: rgb(228, 78, 8) !important ;
+  font-size: 40px;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: rgb(228, 78, 8) !important ;
+  font-size: 40px;
+}
+.texcard {
+  font-family: "iranYekan" !important;
+}
+.texcardTitle {
+  font-family: "iranYekan" !important;
+  font-weight: 600;
+}
+.rowOver {
+  padding: 0 100px;
+}
+.icon {
+  border: 1px solid rgb(228, 78, 8) ;
+  padding: 12px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  width: 100px;
+}
+.icon:hover{
+  cursor: pointer;
+  border: 1px solid rgb(228, 78, 8) ;
+  background-color: rgb(228, 78, 8) ;
+}
+.lightBulb{
+  color: rgb(228, 78, 8) ;
+}
+.lightBulb:hover{
+  cursor: pointer;
+  color: rgb(255, 255, 255) ;
+}
+.sliderdesktap{
+  
+}
+.slidermobile{
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .rowOver {
+    padding: unset;
+  }
+  .sliderdesktap{
+    display: none;
+  }
+  .slidermobile{
+    display: unset;
+  }
 }

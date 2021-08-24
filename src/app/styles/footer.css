@@ -1,0 +1,41 @@
+.containerFooter {
+    background: linear-gradient(#1d2029 , #420119 ) ;
+    color: #fff;
+}
+.titlefooter{
+    font-size:30px;
+}
+.imgfoot{
+    border: 3px solid rgb(228, 78, 8) ;
+    border-radius: 20px;
+    width: 100%;
+}
+.imgfoot:hover{
+    cursor: pointer ;
+    opacity: .9;
+    border-radius: 20px;
+    width: 100%;
+}
+.imgback{
+    border-radius: 20px;
+    width: 300px;
+}
+.imgback:hover{
+    transition: .3s ease-in-out;
+    border-radius: 20px;
+    width: 320px;
+}
+.texcardfoot{
+    font-family: "iranYekan" !important;
+    color: rgb(228, 78, 8);
+}
+.texcardfoot1{
+    padding-bottom: 10px;
+    color: #fff;
+    border-bottom: rgb(228, 78, 8) 2px solid;
+}
+.texcardfoot1:hover{
+    cursor: pointer;
+    color: rgb(228, 78, 8);
+    border-bottom: #fff 2px solid;
+}

@@ -9,17 +9,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 import { Card, CardHeader, CardContent, Typography, CardActionArea, CardMedia } from "@material-ui/core";
 const useStyles = makeStyles({
-    root: {
-        textAlign : "right",
-        maxWidth: 500,
-        height: 200
-    },
+    // root: {
+    //     textAlign: "right",
+    //     maxWidth: 500,
+    //     height: 250
+    // },
     media: {
-        textAlign : "center",
+        textAlign: "center",
         height: 140,
     },
-    content :{
-        height : "100%"
+    content: {
+        height: "100%"
     }
 
 });
@@ -28,9 +28,17 @@ const Overview = () => {
 
     return (
         <section className="overview">
-            <div className="container p-5 bg-dark">
-                <div className="row">
+
+            <div className="containerOver  p-5 ">
+                <Typography className=" pb-5">
+                    <span className="titleOverwiew">
+                        پیام ها
+                    </span>
+
+                </Typography>
+                <div className="row rowOver">
                     <Slider
+                        className="sliderdesktap"
                         dots={false}
                         slidesToShow={2}
                         slidesToScroll={1}
@@ -38,20 +46,70 @@ const Overview = () => {
                         autoplaySpeed={1000}
                     >
                         {warningsMessages.map(messages => (
-                            <Card className={classes.root}>
-                                <CardContent className={classes.content}>
+                            <Card
+                                className="card"
+                            // className={classes.root}
+                            >
+                                <CardContent
+                                    className="cardC"
+                                    className={classes.content}
+                                >
                                     <div className="row h-100">
-                                        <div className="col-8">
-                                            <Typography>
+                                        <div className="col-8 py-5">
+                                            <Typography className="texcardTitle">
                                                 توجه
                                             </Typography>
                                             <hr />
-                                            <Typography variant="body2" color="textSecondary" component="p">
+                                            <Typography variant="body2" color="textSecondary" component="p" className="texcard">
                                                 {messages.msg}
                                             </Typography>
                                         </div>
-                                        <div className="col-4 d-flex ">
-                                            <CardMedia classname={classes.media}>
+                                        <div className="col-4 p-5">
+                                            <CardMedia
+                                                classname={classes.media}
+                                            >
+                                                <span className="icon">
+                                                    <FontAwesomeIcon className="lightBulb" icon={faLightbulb} size="5x" />
+                                                </span>
+                                            </CardMedia>
+                                        </div>
+                                    </div>
+                                </CardContent>
+                            </Card>
+
+                        ))}
+                    </Slider>
+                    <Slider
+                        className="slidermobile"
+                        dots={false}
+                        slidesToShow={1}
+                        slidesToScroll={1}
+                        autoplay={false}
+                        autoplaySpeed={1000}
+                    >
+                        {warningsMessages.map(messages => (
+                            <Card
+                                className="card"
+                            // className={classes.root}
+                            >
+                                <CardContent
+                                    className="cardC"
+                                    className={classes.content}
+                                >
+                                    <div className="row h-100">
+                                        <div className="col-8 py-5">
+                                            <Typography className="texcardTitle">
+                                                توجه
+                                            </Typography>
+                                            <hr />
+                                            <Typography variant="body2" color="textSecondary" component="p" className="texcard">
+                                                {messages.msg}
+                                            </Typography>
+                                        </div>
+                                        <div className="col-4 p-5">
+                                            <CardMedia
+                                                classname={classes.media}
+                                            >
                                                 <span className="icon">
                                                     <FontAwesomeIcon className="lightBulb" icon={faLightbulb} size="5x" />
                                                 </span>
