@@ -32,9 +32,9 @@
     border-bottom: rgb(228, 78, 8) 3px solid !important ;
   }
 }
-.containerOver {
+/* .containerOver {
   /* background-color: rgb(245, 245, 245); */
-}
+/* } */
 .slick-prev:before,
 .slick-next:before {
   color: rgb(228, 78, 8) 3px solid !important ;
@@ -81,9 +81,9 @@
   cursor: pointer;
   color: rgb(255, 255, 255) ;
 }
-.sliderdesktap{
+/* .sliderdesktap{
   
-}
+} */
 .slidermobile{
   display: none;
 }

@@ -1,11 +1,11 @@
 import React from "react"
-
-const TicketDetail = ()=>{
+import MaterialLayout from "./Layout/MaterialLayout"
+import CheckoutPage from "./CheckoutPage/CheckoutPage"
+const TicketAdd = ()=>{
     return(
-        <>
-            123
-        </>
+        <MaterialLayout>
+            <CheckoutPage/>
+        </MaterialLayout>
     )
-
 }
-export default TicketDetail
+export default TicketAdd

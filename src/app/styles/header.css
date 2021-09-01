@@ -9,12 +9,12 @@
 .header {
     background: linear-gradient(#1d2029, #290110);
 }
-.navlink1 {
-    color: rgb(228, 78, 8) !important;
+/* .navlink1 {
+    color: rgb(228, 78, 8);
 }
 .navlink1:hover {
     cursor: pointer;
-}
+} */
 .navlink {
     border-radius: 20px;
 }
@@ -22,4 +22,7 @@
     cursor: pointer;
     background: #fa573a;
     color: #fff;
+}
+.navlink:active {
+    background-color: #fa573a;
 }

@@ -7,13 +7,13 @@ const Banner = () => {
         <section className="banner">
             <div className="container h-100">
                 <div className="row h-100 justify-content-end">
-                    <div className="col-xl-6  col-sm-12 col-md-12 col1">
-                        {/* <h4 className="textTitle p-2 ">
+                    <div className="col-xl-6 mt-5 col-sm-12 col-md-12 col1 text-center">
+                        <h3 className="text-danger ">
+                            سامانه ثبت و پیگیری خرابی های شبکه توزیع
+                        </h3>
+                        <h2 className="textTitle p-2 ">
                             شرکت توانیر
-                        </h4> */}
-                        {/* <p className="texbanner p-3">
-                            در صورت تمایل به ثبت درخواست جدید، به بخش ثبت درخواست و در صورت تمایل به پیگیری درخواست قبلی ، با در دست داشتن کد رهگیری درخواست خود، به بخش پیگیری درخواست مراجعه نمایید.
-                        </p> */}
+                        </h2>
                     </div>
                     <div className=" col-xl-6  col-sm-12 col-md-12 col2">
                         <div className="row">
