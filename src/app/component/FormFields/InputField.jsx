@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { at } from 'lodash';
-import { useField } from 'formik';
+import { useField, useFormikContext } from 'formik';
 import { TextField, Typography } from '@material-ui/core';
 import { Button } from '@material-ui/core';
 import { InputAdornment } from '@material-ui/core';
@@ -9,8 +9,10 @@ import "./styles.css"
 
 
 export default function InputField(props) {
+  console.log(props);
   const { errorText, ...rest } = props;
   const [field, meta, helpers] = useField(props.name);
+  // const { setFieldError, errors } = useFormikContext()
   const { setValue, setTouched } = helpers
   function _renderHelperText() {
     const [touched, error] = at(meta, 'touched', 'error');

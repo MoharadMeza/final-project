@@ -1,10 +1,9 @@
-import React, { useState, useMemo } from 'react';
+import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import { InputField, SelectField } from '../../FormFields';
 import { Box } from '@material-ui/core';
 import provinces from '../../../enums/json/provinces.json'
 import cities from '../../../enums/json/cities.json'
-import { useFormikContext } from 'formik';
 export default function UserInfo(props) {
   const {
     formField: {
@@ -16,11 +15,11 @@ export default function UserInfo(props) {
       city,
       state, }
   } = props;
-  const { values , setFieldValue } = useFormikContext()
-  const p = useMemo(() => {
-    setFieldValue("city" , "")
-    return values.state
-  }, [values.state])
+  // const { values , setFieldValue } = useFormikContext()
+  // const p = useMemo(() => {
+  //   setFieldValue("city" , "")
+  //   return values.state
+  // }, [values.state])
   return (
     <React.Fragment>
       <Box mb={3}>
@@ -62,7 +61,6 @@ export default function UserInfo(props) {
         </Grid>
         <Grid item xs={12} sm={6}>
           <SelectField
-            province={p}
             name={city.name}
             label={city.label}
             data={cities}

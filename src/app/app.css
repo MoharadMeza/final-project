@@ -1,6 +1,9 @@
 *{
     font-family: 'iranYekan' !important;
 }
+body{
+    background-color: gray !important;
+}
 @font-face {
     font-family: 'iranYekan';
     src: local('iranYekan'),

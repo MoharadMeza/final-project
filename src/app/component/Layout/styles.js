@@ -3,16 +3,14 @@ import {
     responsiveFontSizes,
     makeStyles,
   } from '@material-ui/core/styles';
-  import { cyan } from '@material-ui/core/colors';
   let theme = createTheme({
     marginTop: "50px",
     direction:'rtl',
-    palette: { type: 'dark', primary: {
+    palette: { type: 'light', primary: {
       main : '#02ad07'
-    } },
-    secondary : {
-      main : "#fffff"
-    }
+    }, 
+    text : {primary : "#fffff"}
+  },
   });
   theme = responsiveFontSizes(theme);
   const useStyle = makeStyles(() => ({
@@ -26,10 +24,11 @@ import {
         marginLeft: 'auto',
         marginRight: 'auto',
       },
-      // backgroundColor: theme.palette.secondary,
+      backgroundColor: "#000",
       color: theme.palette.text.primary,
     },
     paper: {
+      // backgroundColor : "#585959",
       marginTop: theme.spacing(3),
       marginBottom: theme.spacing(3),
       padding: theme.spacing(2),

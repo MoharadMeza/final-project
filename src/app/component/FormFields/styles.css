@@ -2,13 +2,11 @@
     border: 2px solid white;
     width: 100%;
     font-size: 1rem;
-    border-radius: 10;
+    border-radius: 5px;
 }
 .input-file-label-invalid{
     border-radius: 5px;
-    background-color: rgb(252, 234, 234);
     border: 2px solid rgb(211, 40, 40);
     width: 100%;
     font-size: 1rem;
-    border-radius: 10;
 }

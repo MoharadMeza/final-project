@@ -1,5 +1,4 @@
 import * as Yup from 'yup';
-import moment from 'moment';
 import checkoutFormModel from './checkoutFormModel';
 const {
     formField: {
@@ -40,7 +39,7 @@ export default [
             .required(`${postalCode.requiredErrorMsg}`),
         [nationalCode.name]: Yup.number()
             .typeError("لطفا کدملی را بطور صحیح وارد کنید")
-            .test("bill", "کدملی باید 10 رقمی باشد", (val) => { if (val) return val.toString().length === 10 })
+            .test("bill", "کدملی باید 10 رقمی باشد", (val) => { if (val) return val.toString().length === 9 })
             .required(`${nationalCode.requiredErrorMsg}`),
         [address.name]: Yup.string().min(7, "این فیلد باید حداقا 7 کاراکتر داشته باشد").required(`${address.requiredErrorMsg}`),
         [city.name]: Yup.string()
@@ -51,9 +50,15 @@ export default [
             .required(`${state.requiredErrorMsg}`),
     }),
     Yup.object().shape({
-        [necessaryImg1.name]: Yup.string().required(`${necessaryImg1.requiredErrorMsg}`),
-        [necessaryImg2.name]: Yup.string().required(`${necessaryImg2.requiredErrorMsg}`),
-        [necessaryImg3.name]: Yup.string().required(`${necessaryImg3.requiredErrorMsg}`),
+        [necessaryImg1.name]: Yup.mixed()
+        .test("fileSize" , "حجم فایل بیشتر از 200 کیلو بایت است" , value => value &&  value.size < 200000)
+        .required(`${necessaryImg1.requiredErrorMsg}`),
+        [necessaryImg2.name]: Yup.mixed()
+        .test("fileSize" , "حجم فایل بیشتر از 200 کیلو بایت است" , value => value &&  value.size < 200000)
+        .required(`${necessaryImg2.requiredErrorMsg}`),
+        [necessaryImg3.name]: Yup.mixed()
+        .test("fileSize" , "حجم فایل بیشتر از 200 کیلو بایت است" , value => value &&  value.size < 200000)
+        .required(`${necessaryImg3.requiredErrorMsg}`),
     }),
     Yup.object().shape({
         [date.name]: Yup.object().required(`${date.requiredErrorMsg}`),

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
+import { Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 function CheckoutSuccess(props) {
   console.log(props.track);
@@ -14,6 +16,11 @@ function CheckoutSuccess(props) {
       <Typography variant="subtitle1">
         {`کد رهگیری شما : ${props.track}`}
       </Typography>
+      <Link to="/" className="text-decoration-none">
+        <Button variant="contained" color="primary" className="mt-5">
+          بازگشت به صفحه اصلی
+        </Button>
+      </Link>
     </React.Fragment>
   );
 }

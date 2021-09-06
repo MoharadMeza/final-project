@@ -16,6 +16,7 @@ function SelectField(props) {
   const { label, data, ...rest } = props;
   const [field, meta,] = useField(props);
   const { value: selectedValue } = field;
+  const {setFieldValue , values} = useFormikContext()
   const [touched, error] = at(meta, 'touched', 'error');
   const isError = touched && error && true;
   function _findProvinceId(province) {
@@ -34,7 +35,10 @@ function SelectField(props) {
     return (
       <FormControl {...rest} error={isError}>
         <InputLabel>{label}</InputLabel>
-        <Select {...field} value={selectedValue ? selectedValue : ''} >
+        <Select {...field} value={selectedValue ? selectedValue : ''} onChange={(input)=>{
+          setFieldValue("state",input.target.value);
+          setFieldValue("city" , null)
+        }}>
           {data.map((item, index) => (
             <MenuItem key={index} value={item.name}>
               {item.name}
@@ -50,8 +54,8 @@ function SelectField(props) {
         <InputLabel>{label}</InputLabel>
         <Select {...field} value={selectedValue ? selectedValue : ''} >
           {data.map((item, index) => {
-            if (props.province) {
-              let province = _findProvinceId(props.province)
+            if (values.state) {
+              let province = _findProvinceId(values.state)
               if (item.province_id === province.id) {
                 return (
                   <MenuItem key={index} value={item.slug}>

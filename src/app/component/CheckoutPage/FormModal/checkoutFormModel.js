@@ -84,17 +84,14 @@ export default {
         facture1:{
             name: 'facture1',
             label: 'تصویر محل حادثه',
-            // requiredErrorMsg: 'این فیلد الزامیست',
         },
         facture2:{
             name: 'facture2',
             label: 'تصویر فاکتور فروشگاه یا تعمیرگاه مجاز 1',
-            // requiredErrorMsg: 'این فیلد الزامیست',
         },
         facture3:{
             name: 'facture3',
             label: 'تصویر فاکتور فروشگاه یا تعمیرگاه مجاز 2',
-            // requiredErrorMsg: 'این فیلد الزامیست',
         },
         
     }

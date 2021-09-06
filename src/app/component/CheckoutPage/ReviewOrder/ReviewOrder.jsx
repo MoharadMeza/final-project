@@ -24,7 +24,7 @@ export default function ReviewOrder() {
         </Grid>
 
         <Grid sm={12} lg={12} item component="h6">
-          {`آدرس : ${formValues.state}-${formValues.city}-${formValues.address}`}
+          {`آدرس : ${formValues.state} - ${formValues.city} - ${formValues.address}`}
         </Grid>
 
         <Grid sm={12} lg={4} item component="h6">

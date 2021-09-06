@@ -23,7 +23,7 @@ const Overview = () => {
     const setting = {
         dots: false,
         slidesToShow: 2,
-        slidesToScroll:  1,
+        slidesToScroll: 1,
         autoplay: false,
         autoplaySpeed: 1000,
         responsive: [
@@ -57,85 +57,84 @@ const Overview = () => {
                 <div className="row rowOver">
                     <Slider
                         className="sliderdesktap"
-                        {...setting}                        
+                        {...setting}
                     >
-                    {warningsMessages.map(messages => (
-                        <Card
-                            className="card"
-                        // className={classes.root}
-                        >
-                            <CardContent
-                                className="cardC"
-                                className={classes.content}
+                        {warningsMessages.map((messages, index) => (
+                            <Card
+                                className="card"
+                                key={index}
                             >
-                                <div className="row h-100">
-                                    <div className="col-8 py-5">
-                                        <Typography className="texcardTitle">
-                                            توجه
-                                        </Typography>
-                                        <hr />
-                                        <Typography variant="body2" color="textSecondary" component="p" className="texcard">
-                                            {messages.msg}
-                                        </Typography>
+                                <CardContent
+                                    className="cardC"
+                                    className={classes.content}
+                                >
+                                    <div className="row h-100">
+                                        <div className="col-8 py-5">
+                                            <Typography className="texcardTitle">
+                                                توجه
+                                            </Typography>
+                                            <hr />
+                                            <Typography variant="body2" color="textSecondary" component="p" className="texcard">
+                                                {messages.msg}
+                                            </Typography>
+                                        </div>
+                                        <div className="col-4 p-5">
+                                            <CardMedia
+                                                className={classes.media}
+                                            >
+                                                <span className="icon">
+                                                    <FontAwesomeIcon className="lightBulb" icon={faLightbulb} size="5x" />
+                                                </span>
+                                            </CardMedia>
+                                        </div>
                                     </div>
-                                    <div className="col-4 p-5">
-                                        <CardMedia
-                                            classname={classes.media}
-                                        >
-                                            <span className="icon">
-                                                <FontAwesomeIcon className="lightBulb" icon={faLightbulb} size="5x" />
-                                            </span>
-                                        </CardMedia>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
+                                </CardContent>
+                            </Card>
 
-                    ))}
+                        ))}
                     </Slider>
-                <Slider
-                    className="slidermobile"
-                    dots={false}
-                    slidesToShow={1}
-                    slidesToScroll={1}
-                    autoplay={false}
-                    autoplaySpeed={1000}
-                >
-                    {warningsMessages.map(messages => (
-                        <Card
-                            className="card"
-                        // className={classes.root}
-                        >
-                            <CardContent
-                                className="cardC"
-                                className={classes.content}
-                            >
-                                <div className="row h-100">
-                                    <div className="col-8 py-5">
-                                        <Typography className="texcardTitle">
-                                            توجه
-                                        </Typography>
-                                        <hr />
-                                        <Typography variant="body2" color="textSecondary" component="p" className="texcard">
-                                            {messages.msg}
-                                        </Typography>
+                    <Slider
+                        className="slidermobile"
+                        dots={false}
+                        slidesToShow={1}
+                        slidesToScroll={1}
+                        autoplay={false}
+                        autoplaySpeed={1000}
+                    >
+                        {warningsMessages.map((messages, index) => (
+                            <Card
+                                className="card"
+                                key={index}>
+                                <CardContent
+                                    className="cardC"
+                                    className={classes.content}
+                                >
+                                    <div className="row h-100">
+                                        <div className="col-8 py-5">
+                                            <Typography className="texcardTitle">
+                                                توجه
+                                            </Typography>
+                                            <hr />
+                                            <Typography variant="body2" color="textSecondary" component="p" className="texcard">
+                                                {messages.msg}
+                                            </Typography>
+                                        </div>
+                                        <div className="col-4 p-5">
+                                            <CardMedia
+                                                className={classes.media}
+                                            >
+                                                <span className="icon">
+                                                    <FontAwesomeIcon className="lightBulb" icon={faLightbulb} size="5x" />
+                                                </span>
+                                            </CardMedia>
+                                        </div>
                                     </div>
-                                    <div className="col-4 p-5">
-                                        <CardMedia
-                                            classname={classes.media}
-                                        >
-                                            <span className="icon">
-                                                <FontAwesomeIcon className="lightBulb" icon={faLightbulb} size="5x" />
-                                            </span>
-                                        </CardMedia>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
+                                </CardContent>
+                            </Card>
 
-                    ))}
-                </Slider>
-            </div>
+                        ))}
+                    </Slider>
+                </div>
             </div>
         </section >
     )

@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import "../styles/banner.css"
+import PDF from "../../media/info.pdf"
 const Banner = () => {
 
     return (
@@ -35,7 +36,7 @@ const Banner = () => {
                                 </Link>
                             </div>
                             <div className=" p-2 btn1">
-                                <Link to="ticket/detail" className="w-100 d-flex justify-content-center btnlink">
+                                <Link to={PDF} target="_blank" className="w-100 d-flex justify-content-center btnlink">
                                     <button className="btn  btn-danger rounded-pill w-75 btnbaner">
                                         راهنمای کاربر
                                     </button>

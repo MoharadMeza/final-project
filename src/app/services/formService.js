@@ -1,3 +1,10 @@
+const handleError = async (response)=>{
+        if(!response.ok)
+            throw Error(response.status)
+        let json = await response.json()
+        return json
+}
+
 const postDamageInfo = async (props) => {
     try {
         let response = await fetch("http://localhost:9898/api/v1/damage-reports/", {
@@ -13,17 +20,18 @@ const postDamageInfo = async (props) => {
     }
 }
 
-const getStatus = async (props) => {
+const getStatus = async (formData) => {
     try {
         let response = await fetch("http://localhost:9898/api/v1/damage-reports/track/", {
             method: 'POST',
-            body: props,
+            body: formData,
         })
-        let json = await response.json()
+        let json = await handleError(response)
+        // let json = await response.json()
         return json
     }
     catch (error) {
-        console.log(error);
+        return(error);
     }
 }
 
@@ -45,11 +53,10 @@ const sendSuggestions = async (props) => {
             method: 'POST',
             body: props,
         })
-        let json = await sugges.json()
-        return json
+        return sugges
     }
     catch (error) {
-        console.log(error);
+        return error
     }
 
 }

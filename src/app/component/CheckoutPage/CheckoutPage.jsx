@@ -103,7 +103,7 @@ export default function CheckoutPage() {
         ) : (
           <Formik
             initialValues={formInitialValues}
-            // validationSchema={currentValidationSchema}
+            validationSchema={currentValidationSchema}
             onSubmit={_handleSubmit}
           >
             {({ isSubmitting }) => (
